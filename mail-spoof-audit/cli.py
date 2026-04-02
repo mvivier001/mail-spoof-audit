@@ -199,10 +199,10 @@ def print_results(results, check_mx=False, check_ptr=False):
     spoofable_domains = [r["domain"] for r in results if r["spoof"] in ["🟢", "🟡"]]
 
     if spoofable_domains:
-        print("\n📝 Conclusion : Les domaines suivants peuvent être spoofés :")
+        print("\n📝 Conclusion : The following domains could be spoofed :")
         print("👉 " + ", ".join(spoofable_domains))
     else:
-        print("\n✅ Conclusion : Aucun domaine spoofable détecté.")
+        print("\n✅ Conclusion : No domain can be spoofed.")
 
 # ---------------- MAIN ----------------
 
