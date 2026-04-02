@@ -22,7 +22,7 @@ A fast CLI tool to audit **SPF, DMARC, DKIM** and identify **email spoofing risk
 ### With pipx (recommended)
 
 ```bash
-pipx install git+https://github.com/yourname/mail-spoof-audit.git
+pipx install git+https://github.com/mvivier001/mail-spoof-audit.git
 ```
 ---
 
@@ -44,6 +44,8 @@ mail-spoof-audit test --threads 10
 
 ## 🧾 Output Example
 
+
+```bash
 Domain                    Ex SPF DMARC           DKIM Reason             Spoof
 -------------------------------------------------------------------------------
 test.com                  ✅  ✅  ✅ (reject)     ✅   -                     🔴
@@ -51,8 +53,9 @@ test.fr                   ✅  ✅  ❗ (none)       ❌   DMARC none           
 test.io                   ✅  ❌  ❌              ❌   no SPF                🟢
 test.lu                   ❌  ❌  ❌              ❌   domain does not exist ❌
 
-📝 Conclusion : The following domains could be spoof :
+📝 Conclusion : The following domains could be spoofed:
 👉 test.fr, test.io
+```
 
 ---
 
